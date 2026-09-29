@@ -18,9 +18,9 @@
             <input type="checkbox" name="remember" id="remember">
             <label for="remember" class="text-sm">Ingat saya</label>
         </div>
-        <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Masuk</button>
+        <button type="submit" class="w-full bg-[#ee4d2d] text-white py-2 rounded hover:bg-[#d73d1f]">Masuk</button>
     </form>
-    <p class="text-sm text-center mt-4">Belum punya akun? <a href="{{ route('register') }}" class="text-blue-600 hover:underline">Daftar</a></p>
+    <p class="text-sm text-center mt-4">Belum punya akun? <a href="{{ route('register') }}" class="text-[#ee4d2d] hover:underline">Daftar</a></p>
     <div class="mt-6 p-3 bg-gray-50 rounded text-xs text-gray-600">
         <strong>Akun demo:</strong><br>
         Email: <code>admin@silacak.test</code><br>

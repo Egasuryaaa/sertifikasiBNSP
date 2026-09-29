@@ -34,7 +34,7 @@
                 @csrf
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Pilih Layanan</label>
-                    <select name="layanan_id" class="w-full border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" required>
+                    <select name="layanan_id" class="w-full border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-[#ee4d2d] focus:border-[#ee4d2d] transition-colors" required>
                         <option value="">- Silakan Pilih -</option>
                         @foreach ($layanan as $l)
                             <option value="{{ $l->id }}">{{ $l->nama }} - Rp {{ number_format($l->tarif_per_kg, 0, ',', '.') }}/kg</option>
@@ -44,31 +44,31 @@
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Berat Aktual (kg)</label>
-                    <input type="number" step="0.1" name="berat_aktual" placeholder="Contoh: 1.5" class="w-full border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" required>
+                    <input type="number" step="0.1" name="berat_aktual" placeholder="Contoh: 1.5" class="w-full border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-[#ee4d2d] focus:border-[#ee4d2d] transition-colors" required>
                 </div>
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Dimensi Paket (opsional)</label>
                     <div class="grid grid-cols-3 gap-3">
-                        <input type="number" step="0.1" name="panjang" placeholder="P (cm)" class="border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
-                        <input type="number" step="0.1" name="lebar" placeholder="L (cm)" class="border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
-                        <input type="number" step="0.1" name="tinggi" placeholder="T (cm)" class="border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                        <input type="number" step="0.1" name="panjang" placeholder="P (cm)" class="border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-[#ee4d2d] focus:border-[#ee4d2d] transition-colors">
+                        <input type="number" step="0.1" name="lebar" placeholder="L (cm)" class="border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-[#ee4d2d] focus:border-[#ee4d2d] transition-colors">
+                        <input type="number" step="0.1" name="tinggi" placeholder="T (cm)" class="border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-[#ee4d2d] focus:border-[#ee4d2d] transition-colors">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Nilai Barang (Rp)</label>
-                    <input type="number" step="1000" name="nilai_barang" placeholder="0" value="0" class="w-full border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                    <input type="number" step="1000" name="nilai_barang" placeholder="0" value="0" class="w-full border border-gray-300 text-gray-900 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-[#ee4d2d] focus:border-[#ee4d2d] transition-colors">
                 </div>
 
                 <div class="pt-2">
                     <label class="flex items-center gap-2 cursor-pointer">
-                        <input type="checkbox" name="is_member" value="1" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                        <input type="checkbox" name="is_member" value="1" class="w-4 h-4 rounded border-gray-300 text-[#ee4d2d] focus:ring-[#ee4d2d]">
                         <span class="text-sm text-gray-700">Pelanggan Member (diskon 10%)</span>
                     </label>
                 </div>
                 
-                <button class="w-full bg-blue-600 text-white font-medium py-3 rounded-md hover:bg-blue-700 transition-colors mt-2 shadow-sm">
+                <button class="w-full bg-[#ee4d2d] text-white font-medium py-3 rounded-md hover:bg-[#d73d1f] transition-colors mt-2 shadow-sm">
                     Hitung Ongkos Kirim
                 </button>
             </form>

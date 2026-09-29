@@ -22,8 +22,8 @@
             <label class="block mb-1 font-semibold text-sm">Konfirmasi Password</label>
             <input type="password" name="password_confirmation" class="border rounded p-2 w-full" required>
         </div>
-        <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Daftar</button>
+        <button type="submit" class="w-full bg-[#ee4d2d] text-white py-2 rounded hover:bg-[#d73d1f]">Daftar</button>
     </form>
-    <p class="text-sm text-center mt-4">Sudah punya akun? <a href="{{ route('login') }}" class="text-blue-600 hover:underline">Login</a></p>
+    <p class="text-sm text-center mt-4">Sudah punya akun? <a href="{{ route('login') }}" class="text-[#ee4d2d] hover:underline">Login</a></p>
 </div>
 @endsection

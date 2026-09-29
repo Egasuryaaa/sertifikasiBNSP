@@ -89,7 +89,7 @@
     </div>
 
     <div class="flex gap-2">
-        <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800">Simpan</button>
+        <button type="submit" class="bg-[#ee4d2d] text-white px-6 py-2 rounded hover:bg-[#d73d1f]">Simpan</button>
         <a href="{{ route('resi.index') }}" class="border px-6 py-2 rounded">Batal</a>
     </div>
 </form>
