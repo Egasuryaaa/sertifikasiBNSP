@@ -3,7 +3,7 @@
 @section('konten')
 <div class="flex justify-between items-center mb-4">
     <h1 class="text-2xl font-bold">Daftar Resi</h1>
-    <a href="{{ route('resi.create') }}" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">+ Buat Resi</a>
+    <a href="{{ route('resi.create') }}" class="bg-[#ee4d2d] text-white px-4 py-2 rounded hover:bg-[#d73d1f]">+ Buat Resi</a>
 </div>
 
 <form method="GET" class="mb-4 flex flex-wrap gap-2">
@@ -14,14 +14,14 @@
             <option value="{{ $s }}" @selected(request('status') == $s)>{{ ucfirst($s) }}</option>
         @endforeach
     </select>
-    <button class="bg-blue-700 text-white px-4 py-2 rounded">Filter</button>
+    <button class="bg-[#ee4d2d] text-white px-4 py-2 rounded hover:bg-[#d73d1f]">Filter</button>
     @if (request('q') || request('status'))
         <a href="{{ route('resi.index') }}" class="border px-4 py-2 rounded">Reset</a>
     @endif
 </form>
 
 <table class="min-w-full bg-white rounded shadow text-sm">
-    <thead class="bg-blue-700 text-white">
+    <thead class="bg-[#ee4d2d] text-white">
         <tr>
             <th class="p-3 text-left">No. Resi</th>
             <th class="p-3 text-left">Pengirim</th>
@@ -51,7 +51,7 @@
                     </span>
                 </td>
                 <td class="p-3 space-x-2 whitespace-nowrap">
-                    <a href="{{ route('resi.show', $r) }}" class="text-blue-600 hover:underline">Lihat</a>
+                    <a href="{{ route('resi.show', $r) }}" class="text-[#ee4d2d] hover:underline">Lihat</a>
                     <a href="{{ route('resi.label', $r) }}" class="text-purple-600 hover:underline">Label</a>
                     <form action="{{ route('resi.destroy', $r) }}" method="POST" class="inline" onsubmit="return confirm('Hapus resi ini?')">
                         @csrf @method('DELETE')

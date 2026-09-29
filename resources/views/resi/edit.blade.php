@@ -84,7 +84,7 @@
     </div>
 
     <div class="flex gap-2">
-        <button class="bg-blue-700 text-white px-6 py-2 rounded">Perbarui</button>
+        <button class="bg-[#ee4d2d] text-white px-6 py-2 rounded hover:bg-[#d73d1f]">Perbarui</button>
         <a href="{{ route('resi.show', $resi) }}" class="border px-6 py-2 rounded">Batal</a>
     </div>
 </form>

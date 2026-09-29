@@ -67,7 +67,7 @@
     <div class="bg-white p-6 rounded shadow">
         <h2 class="font-bold text-lg mb-3">Riwayat Perjalanan</h2>
         @forelse ($resi->trackingLog as $log)
-            <div class="border-l-4 border-blue-500 pl-4 mb-3">
+            <div class="border-l-4 border-[#ee4d2d] pl-4 mb-3">
                 <div class="font-semibold">{{ strtoupper($log->status) }} - {{ $log->lokasi }}</div>
                 <div class="text-sm text-gray-500">{{ $log->created_at->format('d M Y H:i') }}</div>
                 @if($log->keterangan)<div class="text-sm">{{ $log->keterangan }}</div>@endif

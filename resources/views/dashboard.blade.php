@@ -5,9 +5,9 @@
 
 {{-- Kartu Statistik --}}
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-    <div class="bg-white p-5 rounded shadow border-l-4 border-blue-500">
+    <div class="bg-white p-5 rounded shadow border-l-4 border-[#ee4d2d]">
         <p class="text-sm text-gray-500">Total Resi</p>
-        <p class="text-3xl font-bold text-blue-700">{{ number_format($stats['total_resi']) }}</p>
+        <p class="text-3xl font-bold text-[#ee4d2d]">{{ number_format($stats['total_resi']) }}</p>
     </div>
     <div class="bg-white p-5 rounded shadow border-l-4 border-green-500">
         <p class="text-sm text-gray-500">Pelanggan</p>
@@ -73,7 +73,7 @@
             @forelse ($terbaru as $r)
                 <tr class="border-b hover:bg-gray-50">
                     <td class="p-3 font-mono text-xs">
-                        <a href="{{ route('resi.show', $r) }}" class="text-blue-600 hover:underline">{{ $r->nomor_resi }}</a>
+                        <a href="{{ route('resi.show', $r) }}" class="text-[#ee4d2d] hover:underline">{{ $r->nomor_resi }}</a>
                     </td>
                     <td class="p-3">{{ $r->pelanggan->nama ?? '-' }}</td>
                     <td class="p-3">{{ $r->layanan->nama ?? '-' }}</td>

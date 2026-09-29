@@ -8,8 +8,8 @@
     </div>
     
     <form method="GET" action="{{ route('tracking.cari') }}" class="flex flex-col sm:flex-row gap-3">
-        <input type="text" name="nomor_resi" value="{{ old('nomor_resi') }}" placeholder="Contoh: SLC-20250101-0001" class="flex-1 border border-gray-300 text-gray-900 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" required autofocus>
-        <button class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors shadow-sm">
+        <input type="text" name="nomor_resi" value="{{ old('nomor_resi') }}" placeholder="Contoh: SLC-20250101-0001" class="flex-1 border border-gray-300 text-gray-900 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ee4d2d] focus:border-[#ee4d2d] transition-colors" required autofocus>
+        <button class="bg-[#ee4d2d] text-white px-6 py-3 rounded-md font-medium hover:bg-[#d73d1f] transition-colors shadow-sm">
             Lacak
         </button>
     </form>

@@ -4,9 +4,9 @@
 <h1 class="text-2xl font-bold mb-6">📊 Monitoring Resource Server</h1>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-    <div class="bg-white p-5 rounded shadow border-l-4 border-blue-500">
+    <div class="bg-white p-5 rounded shadow border-l-4 border-[#ee4d2d]">
         <p class="text-sm text-gray-500">PHP Version</p>
-        <p class="text-2xl font-bold text-blue-700">{{ $resources['php_version'] }}</p>
+        <p class="text-2xl font-bold text-[#ee4d2d]">{{ $resources['php_version'] }}</p>
     </div>
     <div class="bg-white p-5 rounded shadow border-l-4 border-green-500">
         <p class="text-sm text-gray-500">Laravel</p>
@@ -69,7 +69,7 @@
     <h2 class="font-bold text-lg mb-4">⚙️ Application Config</h2>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
         <div><span class="text-gray-500">Environment:</span>
-            <span class="px-2 py-1 rounded text-xs {{ $application['app_env'] == 'production' ? 'bg-blue-100 text-blue-700' : 'bg-yellow-100 text-yellow-700' }}">
+            <span class="px-2 py-1 rounded text-xs {{ $application['app_env'] == 'production' ? 'bg-orange-100 text-[#ee4d2d]' : 'bg-yellow-100 text-yellow-700' }}">
                 {{ $application['app_env'] }}
             </span>
         </div>
