@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
             CabangSeeder::class,
             LayananSeeder::class,
             PelangganSeeder::class,
+            ResiSeeder::class,
         ]);
     }
 }

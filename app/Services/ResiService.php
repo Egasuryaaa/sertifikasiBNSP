@@ -7,12 +7,37 @@ use App\Models\Layanan;
 use App\Models\Pelanggan;
 use Illuminate\Support\Facades\Log;
 
+/**
+ * ResiService — lapisan bisnis untuk pembuatan dan pengelolaan resi pengiriman.
+ *
+ * Service ini mengorkestrasi kalkulasi ongkir, pembuatan nomor resi,
+ * pencatatan log tracking awal, dan structured logging ke Laravel Log.
+ */
 class ResiService
 {
+    /**
+     * Buat instance baru ResiService dengan injeksi OngkirService.
+     *
+     * @param OngkirService $ongkirService Service penghitung ongkos kirim.
+     */
     public function __construct(private OngkirService $ongkirService)
     {
     }
 
+    /**
+     * Proses pembuatan resi baru secara lengkap.
+     *
+     * Alur kerja:
+     * 1. Hitung berat tagih (aktual vs volumetrik)
+     * 2. Hitung biaya dasar, diskon member, dan asuransi
+     * 3. Simpan data resi ke database
+     * 4. Buat entri tracking log awal (status: pending)
+     * 5. Tulis structured log ke Laravel Log
+     *
+     * @param  array<string, mixed> $data    Data tervalidasi dari SimpanResiRequest.
+     * @param  int                  $userId  ID user (admin/kurir) yang membuat resi.
+     * @return Resi                          Instance Resi yang baru saja dibuat.
+     */
     public function buatResi(array $data, int $userId): Resi
     {
         $layanan = Layanan::findOrFail($data['layanan_id']);

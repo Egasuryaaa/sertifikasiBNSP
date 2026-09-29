@@ -6,16 +6,38 @@ use App\Models\Layanan;
 use App\Services\OngkirService;
 use Illuminate\Http\Request;
 
+/**
+ * TarifController — fitur kalkulator ongkir publik.
+ *
+ * Menyediakan form dan hasil perhitungan ongkos kirim
+ * tanpa perlu login, untuk keperluan estimasi biaya pengguna.
+ */
 class TarifController extends Controller
 {
+    /**
+     * Injeksi OngkirService melalui constructor.
+     *
+     * @param OngkirService $ongkirService Service penghitung ongkos kirim.
+     */
     public function __construct(private OngkirService $ongkirService) {}
 
+    /**
+     * Tampilkan halaman kalkulator tarif beserta daftar layanan aktif.
+     *
+     * @return \Illuminate\View\View View tarif.index dengan data layanan.
+     */
     public function index()
     {
         $layanan = Layanan::aktif()->orderBy('tarif_per_kg')->get();
         return view('tarif.index', compact('layanan'));
     }
 
+    /**
+     * Proses kalkulasi tarif dan tampilkan hasil estimasi ongkir.
+     *
+     * @param  Request               $request Data form: layanan_id, berat_aktual, dimensi, nilai_barang, is_member.
+     * @return \Illuminate\View\View          View tarif.hasil dengan rincian biaya.
+     */
     public function hitung(Request $request)
     {
         $data = $request->validate([

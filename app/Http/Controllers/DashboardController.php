@@ -7,8 +7,22 @@ use App\Models\Pelanggan;
 use App\Models\Cabang;
 use App\Models\Layanan;
 
+/**
+ * DashboardController — menampilkan ringkasan statistik dan data terbaru sistem.
+ */
 class DashboardController extends Controller
 {
+    /**
+     * Tampilkan halaman dashboard dengan statistik ringkasan sistem.
+     *
+     * Data yang ditampilkan:
+     * - Statistik jumlah: resi, pelanggan, cabang, pendapatan, resi hari ini, resi transit
+     * - Resi per layanan (dengan jumlah)
+     * - Distribusi resi per status
+     * - 5 resi terbaru
+     *
+     * @return \Illuminate\View\View View dashboard dengan compact stats, perLayanan, perStatus, terbaru.
+     */
     public function index()
     {
         $stats = [
